@@ -1,0 +1,55 @@
+.settings-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 800px;
+}
+
+.password-section,
+.delete-section {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.security--title {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.icon-container {
+    margin-right: 20px;
+}
+
+.text-container h3 {
+    margin-bottom: 5px;
+}
+
+.text-container p {
+    margin-bottom: 10px;
+    color: #9C9A9A;
+}
+
+.change-password,
+.delete-account {
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.change-password {
+    background: black;
+    color: white;
+    /* Specific styles for change password button */
+}
+
+.delete-account {
+    background: #E83B47;
+    color: white;
+    /* Specific styles for delete account button */
+}

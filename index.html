@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Dashboard - Home</title>
+
+</head>
+<body>
+    <div class="dashboard--container">
+        <div class="sidebar--section">
+            <div class="sidebar--logo">
+                <img src="../img/logo.svg" alt="logo">
+                <h1>Capstone</h1>
+            </div>
+            <div class="sidebar--links">
+                <a href="#"  class="links">
+                    <div class="dashboard">
+                        <img src="../img/dash.svg" alt="dashboard--icon">
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+                <a href="./notification.html"  class="links">
+                    <div class="notification">
+                        <img src="../img/notification.svg" alt="notification--icon">
+                        <p>Notifications</p>
+                    </div>
+                </a>
+                <a href="./profile.html"  class="links">
+                    <div class="settings">
+                        <img src="../img/settings.svg" alt="settings--icon">
+                        <p>Account Settings</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="#"> -->
+                <div class="logout">
+                    <img src="../img/logout.svg" alt="logout--icon">
+                    <p>Logout</p>
+                </div>
+            <!-- </a> -->
+        </div>
+
+        <div class="main--content">
+
+            <header class="header--section">
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Type to search...">
+                </div>
+
+                <div class="profile--section">
+                    <div class="notify--icon"><i class="far fa-bell"></i></div>
+                    <img src="../img/Line.svg" alt="dividing line">
+                    <div class="header--profile">
+                        <div>
+                            <h4>Fresh Fruit Shop</h4>
+                            <p>Admin</p>
+                        </div>
+                        <img src="../img/profile.jpg" alt="user profile icon">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <section>
+                    <div class="header-container">
+                        <h1 class="header-title">Dashboard</h1>
+                        <button class="export-button">
+                            <img src="../img/export.svg" alt="Export" />
+                            Export
+                        </button>
+
+                        <div class="export-popup hidden">
+                            <div class="export-option">
+                                <img src="../img/excel-icon.svg" alt="Excel Icon" />
+                                <span>Export To Excel</span>
+                            </div>
+                            <div class="export-option">
+                                <img src="../img/word-icon.svg" alt="Word Icon" />
+                                <span>Export To Word</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stat">
+                            <div class="stat-icon">
+                                <img src="../img/temp.svg" alt="">
+                            </div>
+                            <div class="stat-info">
+                                <p class="stat-value">22.2°C</p>
+                                <p class="stat-type">Temperature</p>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                        <div class="stat-icon">
+                            <img src="../img/humidity.svg" alt="">
+                        </div>
+                        <div class="stat-info">
+                            <p class="stat-value">64%</p>
+                            <p class="stat-type">Humidity</p>
+                        </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div>
+                            <div class="stat">
+                                <p class="stat-value">13,000</p>
+                                <p class="stat-change increase">↑ 18%</p>
+                            </div>
+                    
+                            <p class="stat-type">Consumer <br>This Month</p>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div>
+                            <div class="stat">
+                                <p class="stat-value">1,000</p>
+                                <div class="stat-change decrease">↓ 10%</div>
+                    
+                            </div>
+                            <p class="stat-type">Inventory <br>This Month</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="chart-container">
+                        <div class="chart" id="sales-chart">
+                            <h2>Sales Trends By Food Category</h2>
+                            <canvas id="salesTrendsChart"></canvas>
+                        </div>
+                        <div class="chart" id="consumption-chart">
+                            <div class="horizontal-chart">
+                                <h2>Frequently Consumed By Region</h2>
+                                <select name="categories" id="">
+                                    <option value="Vegetable">Vegetable</option>
+                                    <option value="Protein">Protein</option>
+                                    <option value="Diary">Diary</option>
+                                    <option value="Grains">Grains</option>
+                                    <option value="Meat">Meat</option>
+                                    <option value="Seafood">Seafood</option>
+                                </select>
+                            </div>
+                            <canvas id="consumptionRegionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="food-expiration-chart">
+                            <div class="horizontal-chart">
+                                <h2>Food Expiration By Category</h2>
+                                <select name="categories" id="">
+                                    <option value="2024" selected>2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                </select>
+                            </div>
+                            <canvas id="foodExpirationChart"></canvas>
+                            <div class="chart-legend" id="legend-container">
+                    
+                            </div>
+                        </div>
+                        <div class="items-near-expiration">
+                            <h2>Items Nearly Expiration</h2>
+                            <div class="item-list">
+                                <div class="item header--items">
+                                    <div class="product-name">Product Name</div>
+                                    <div class="category">Categories</div>
+                                    <div class="quantity">Quantity</div>
+                                    <div class="price">Price</div>
+                                    <div class="expiry-date">Expiry Date</div>
+                                </div>
+                                <div class="item">
+                                    <div class="product-name">
+                                        <img src="https://selecthealth.org/blog/2020/02/selecthealth.org/-/media/selecthealth/blogs/post/2022/08/apple_types_blog_lg.jpg" alt="Apple">
+                                        <div>
+                                            <span>Apple</span>
+                                            <p class="product--number">#12</p>
+                                        </div>
+                                    </div>
+                                    <div class="category">Fruits</div>
+                                    <div class="quantity">12 Pieces</div>
+                                    <div class="price">500 Rwf</div>
+                                    <div class="expiry-date">Dec 12, 2023</div>
+                                </div>
+                                <div class="item">
+                                    <div class="product-name">
+                                        <img src="https://selecthealth.org/blog/2020/02/selecthealth.org/-/media/selecthealth/blogs/post/2022/08/apple_types_blog_lg.jpg" alt="Apple">
+                                        <div>
+                                            <span>Apple</span>
+                                            <p class="product--number">#12</p>
+                                        </div>
+                                    </div>
+                                    <div class="category">Fruits</div>
+                                    <div class="quantity">12 Pieces</div>
+                                    <div class="price">500 Rwf</div>
+                                    <div class="expiry-date">Dec 12, 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="full-width-chart-container">
+                        <div class="horizontal-chart turnover-chart">
+                            <h2>Inventory Turnover Rate Vs Consumption Pattern</h2>
+                            <select name="categories" class="chart-dropdown">
+                                <option value="Vegetable">Vegetable</option>
+                                <option value="Protein">Protein</option>
+                                <option value="Diary">Diary</option>
+                                <option value="Grains">Grains</option>
+                                <option value="Meat">Meat</option>
+                                <option value="Seafood">Seafood</option>
+                            </select>
+                            <div id="turnover-legend-container"></div>
+                        </div>
+                        <canvas id="inventoryVsConsumptionChart"></canvas>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+<script src="../js/charts.js"></script>
+<script src="../js/inventory.js"></script>
+<script src="../js/horizontalChart.js"></script>
+<script src="../js/pieChart.js"></script>
+
+</body>
+</html>

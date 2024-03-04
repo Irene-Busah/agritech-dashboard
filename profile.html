@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/notification.css">
+    <link rel="stylesheet" href="../css/notify-setting.css">
+    <link rel="stylesheet" href="../css/security.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <title>Capstone - Notifications</title>
+</head>
+
+
+<body>
+    <div class="dashboard--container">
+        <div class="sidebar--section">
+            <div class="sidebar--logo">
+                <img src="../img/logo.svg" alt="logo">
+                <h1>Capstone</h1>
+            </div>
+            <div class="sidebar--links">
+                <a href="./index.html"  class="links">
+                    <div class="dashboard">
+                        <img src="../img/dashboard.svg" alt="dashboard--icon">
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+                <a href="./notification.html"  class="links">
+                    <div class="notification">
+                        <img src="../img/notification.svg" alt="notification--icon">
+                        <p>Notifications</p>
+                    </div>
+                </a>
+                <a href="./profile.html"  class="links">
+                    <div class="settings">
+                        <img src="../img/setting-notify.svg" alt="settings--icon">
+                        <p>Account Settings</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="#"> -->
+                <div class="logout">
+                    <img src="../img/logout.svg" alt="logout--icon">
+                    <p>Logout</p>
+                </div>
+            <!-- </a> -->
+        </div>
+
+        <div class="main--content">
+            <header class="header--section">
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Type to search...">
+                </div>
+
+                <div class="profile--section">
+                    <div class="notify--icon"><i class="far fa-bell"></i></div>
+                    <img src="../img/Line.svg" alt="dividing line">
+                    <div class="header--profile">
+                        <div>
+                            <h4>Fresh Fruit Shop</h4>
+                            <p>Admin</p>
+                        </div>
+                        <img src="../img/profile.jpg" alt="user profile icon">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <section>
+                    <div class="header-container">
+                        <h1 class="header-title">Settings</h1>
+                        <div class="breadcrumb">
+                            <!-- <a href="/dashboard" class="breadcrumb-link"> </a> -->
+                                Dashboard / Account Settings /
+                            <span class="breadcrumb-current">Profile</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="settings-container">
+                        <aside class="sidebar">
+                            <ul class="menu">
+                                <li class="active">
+                                    <img src="../img/arrow.svg" alt="arrow">
+                                    <a href="./profile.html">Profile</a>
+                                </li>
+                                <li><a href="./notification-settings.html">Notification Preferences</a></li>
+                                <li>
+                                    
+                                    <a href="./security-settings.html">Secuity</a>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <div class="profile-container">
+                            <div class="personal-information">
+                                <h3>Personal Information</h3>
+                                <form action="" class="form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="fullName">Full Name</label>
+                                            <input type="text" id="fullName" placeholder="Irene Busah">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phoneNumber">Phone Number</label>
+                                            <input type="tel" id="phoneNumber" placeholder="+990 3343 7865">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" placeholder="Irenebus24@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" id="username" placeholder="irenebus24">
+                                    </div>
+                                    <div class="form-actions">
+                                        <button class="btn cancel">Cancel</button>
+                                        <button class="btn save">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="photo-section">
+                                <h3>Your Photo</h3>
+                                <div class="photo-container">
+                                    <div class="edit-photo">
+                                        <img src="../img/profile.jpg" alt="Your Photo">
+                                        <div class="">
+                                            <h5>Edit your photo</h5>
+                                            <a class=" delete">Delete</a>
+                                            <a class=" update">Update</a>
+                                        </div>
+                                    </div>
+                                    <div class="upload-area">
+                                        <span>Click to upload or drag and drop</span>
+                                        <span>SVG, PNG, JPG or GIF (max. 800 x 800px)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
