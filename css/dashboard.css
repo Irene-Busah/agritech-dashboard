@@ -109,7 +109,6 @@ body {
     cursor: pointer;
 }
 
-/* Header styles */
 .header--section {
     width: calc(100% - 252px);
     margin-left: 250px;
@@ -158,7 +157,6 @@ input[type=text]:focus {
 .far.fa-bell {
     font-size: 24px;
     color: #979797;
-    /* margin-right: 10px;  */
 }
 .profile--section {
     display: flex;
@@ -319,14 +317,6 @@ img[alt="dividing line"] {
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
-
-/* #sales-chart {
-    flex-basis: 60%;
-}
-
-#consumption-chart {
-    flex-basis: 40%;
-} */
 
 .horizontal-chart, .chart h2 {
     display: flex;
@@ -490,8 +480,8 @@ img[alt="dividing line"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    z-index: 100; /* higher z-index to overlay everything */
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100;
     display: none;
 }
 
@@ -523,44 +513,10 @@ img[alt="dividing line"] {
     background-color: #f2f2f2;
 }
 
-/* Show class now makes the dropdown visible */
 .show {
     display: block;
 }
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-    .sidebar--section {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-    }
 
-    .sidebar--links, .logout {
-        display: none; /* Hide sidebar links on small screens, consider a dropdown menu */
-    }
-
-    .header--section {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .content, .chart-container, .stats-card {
-        width: 100%; 
-        margin-left: 0;
-        padding: 20px;
-    }
-
-    .chart, .stats-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .chart, .stats-card {
-        flex-basis: auto; /* Adjust the basis for stacking */
-    }
-}
 
 
 
