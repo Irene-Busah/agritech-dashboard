@@ -32,3 +32,28 @@ var salesTrendsChart = new Chart(salesCtx, {
 
 });
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const exportButton = document.querySelector('.export-button');
+    const exportDropdown = document.querySelector('.export-dropdown');
+    const overlay = document.querySelector('.overlay');
+
+    exportButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        exportDropdown.classList.toggle('show');
+        overlay.classList.toggle('show');
+    });
+
+    exportDropdown.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    overlay.addEventListener('click', () => {
+        exportDropdown.classList.remove('show');
+        overlay.classList.remove('show');
+    });
+});
+
+
+

@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-   
     <link rel="stylesheet" href="./css/dashboard.css">
     <title>Dashboard - Home</title>
 
@@ -70,6 +69,7 @@
                 </div>
             </header>
 
+            
             <div class="content">
                 <section>
                     <div class="header-container">
@@ -79,17 +79,18 @@
                             Export
                         </button>
 
-                        <div class="export-popup hidden">
-                            <div class="export-option">
-                                <img src="#" alt="Excel Icon" />
-                                <span>Export To Excel</span>
-                            </div>
-                            <div class="export-option">
-                                <img src="#" alt="Word Icon" />
-                                <span>Export To Word</span>
-                            </div>
+                        <div class="export-dropdown hidden">
+                            <a href="#" class="export-option">
+                                <img src="./img/excel.svg" alt="Excel Icon" />
+                                Export To Excel
+                            </a>
+                            <a href="#" class="export-option">
+                                <img src="./img/word.svg" alt="Word Icon" />
+                                Export To Word
+                            </a>
                         </div>
                     </div>
+                    <div class="overlay hidden"></div>
                     <div class="stats-card">
                         <div class="stat">
                             <div class="stat-icon">
@@ -237,6 +238,8 @@
 <script src="./js/inventory.js"></script>
 <script src="./js/horizontalChart.js"></script>
 <script src="./js/pieChart.js"></script>
+
+
 
 </body>
 </html>
