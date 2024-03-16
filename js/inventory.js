@@ -4,14 +4,14 @@ const inventoryVsConsumptionChart = new Chart(inventoryVsConsumptionCtx, {
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
         datasets: [{
-            label: 'Turnover Rates',
+            label: 'Inventory Rates',
             data: [0.9, 1.2, 1.3, 0.8, 1.5, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7],
             backgroundColor: '#00AF54',
             borderRadius: 8,
             borderWidth: 1,
             barThickness: 30,
         }, {
-            label: 'Consumption Rates',
+            label: 'Purchase Rates',
             data: [1.1, 1.4, 1.2, 1.3, 1.7, 1.2, 1.5, 1.3, 1.6, 1.7, 1.8, 1.9],
             backgroundColor: '#B8E716',
             borderRadius: 8,
@@ -68,14 +68,14 @@ const inventoryVsConsumptionChart = new Chart(inventoryVsConsumptionCtx, {
                 const bottomY = chart.scales['y'].bottom;
 
                 // The space above the highest bar that you want to keep
-                const spaceAboveBar = -10; // Adjust this value as needed
+                const spaceAboveBar = -10;
 
                 // Draw a background rectangle with border radius
                 ctx.save();
                 ctx.fillStyle = '#CAF9E0';
-                const borderRadius = 5; // Set the border radius
-                const rectHeight = bottomY - topY - spaceAboveBar; // Adjust the height of the rectangle
-                const rectY = topY + spaceAboveBar; // Adjust the Y position to start the rectangle
+                const borderRadius = 5;
+                const rectHeight = bottomY - topY - spaceAboveBar;
+                const rectY = topY + spaceAboveBar;
 
                 // Start drawing the path with rounded corners
                 ctx.beginPath();
